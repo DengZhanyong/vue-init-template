@@ -6,19 +6,19 @@
 
 ## 如何使用
 
-克隆该项目
+**克隆该项目**
 
 ```
 git clone https://github.com/DengZhanyong/vue-init.git
 ```
 
-删除远程库
+**删除远程库**
 
 ```
 git remote rm origin
 ```
 
-连接自己的远程库
+**连接自己的远程库**
 
 ```
 git remote add origin 你的远程仓库地址
@@ -26,32 +26,32 @@ git remote add origin 你的远程仓库地址
 
 如果此时提交你的代码到远程库，你会发现，该项目还存在历史提交记录，可通过以下方式清除
 
-建立新的分支
+**建立新的分支**
 
 ```
 git checkout --orphan new-branch
 ```
 
-重新提交到暂存区
+**重新提交到暂存区**
 
 ```
 git add .
 git commit 'init'
 ```
 
-删除原 master 分支
+**删除原 master 分支**
 
 ```
 git branch -D master
 ```
 
-将当前分支名改为 master
+**将当前分支名改为 master**
 
 ```
 git branch -m master
 ```
 
-提交到远程仓库
+**提交到远程仓库**
 
 ```
 git push --set-upstream origin master
