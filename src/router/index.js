@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Home from '../views/Home.vue'
-import Template from '../views/template.vue'
+import Document from '../views/document.vue'
 
 Vue.use(VueRouter)
 
@@ -11,9 +11,9 @@ const routes = [{
     component: Home
   },
   {
-    path: '/template',
-    name: 'Template',
-    component: Template
+    path: '/document',
+    name: 'Document',
+    component: Document
   },
 ]
 
