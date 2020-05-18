@@ -1,9 +1,6 @@
 <template>
-  <div class="home">
-    <img src="~@/assets/images/logo.png" alt="">
-    <router-link to="/template">
-      模板页面
-    </router-link>
+  <div class="panel">
+    <slot></slot>
   </div>
 </template>
 
@@ -22,7 +19,9 @@ export default {
 }
 </script>
 <style lang="stylus" scoped>
-.home {
-  text-align: center;
+.panel {
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px #ccc;
 }
 </style>
