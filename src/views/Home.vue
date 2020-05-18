@@ -1,9 +1,17 @@
 <template>
-  <div class="home">
-    <img src="~@/assets/images/logo.png" alt="">
-    <router-link to="/template">
-      模板页面
-    </router-link>
+  <div class="home flex-center">
+    <h1>
+      vue-init
+    </h1>
+    <img src="../assets/images/logo.png" alt="">
+    <p>
+      快速构建VUE基础项目，更加合理高效的项目模块化管理
+    </p>
+    <Panel>
+      <router-link to="/document" class="link">
+        说明文档
+      </router-link>
+    </Panel>
   </div>
 </template>
 
@@ -21,8 +29,17 @@ export default {
   mounted() {},
 }
 </script>
-<style lang="stylus" scoped>
+<style lang="less" scoped>
+@import '../assets/css/config.less';
+
 .home {
-  text-align: center;
+  flex-direction: column;
+  color: @main-color;
+  .link {
+    color: @link-color;
+    &:hover {
+      color: #3eaf7c;
+    }
+  }
 }
 </style>
