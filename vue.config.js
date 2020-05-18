@@ -12,11 +12,4 @@ module.exports = {
       },
     },
   },
-  css: {
-    loaderOptions: {
-      stylus: {
-        prependData: `@import "~@/assets/css/config.less";`
-      }
-    }
-  }
 }
