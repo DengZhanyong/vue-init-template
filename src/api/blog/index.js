@@ -4,14 +4,14 @@ import {
 import axios from '../axios/http'
 
 export default {
-  testBlog(params) {
-    return axios.get(`${baseUrl}/testBlog`, {
+  //get请求示例
+  getBlog(params) {
+    return axios.get(`${baseUrl}/getBlog`, {
       params: params
     })
   },
-  projectManager(params) {
-    return axios.get(`${baseUrl}/projectManager`, {
-      params: params
-    })
+  //post请求示例
+  login(params) {
+    return axios.post(`${baseUrl}/login`, params)
   },
 }
