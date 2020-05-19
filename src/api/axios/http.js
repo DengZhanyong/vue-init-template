@@ -13,21 +13,16 @@ const toLogin = () => {
 const errorHandle = (status) => {
   // 状态码判断
   switch (status) {
-    // 401: 未登录状态，跳转登录页
-    case 401:
-      // toLogin()   //403 token过期,跳转登录页
+    case 401: //未登录状态，跳转登录页
+      toLogin()
       break;
-    case 403:
-      // tip('登录过期，请重新登录');
+    case 403: //登录过期，请重新登录
       localStorage.removeItem('token');
-      store.commit('loginSuccess', null);
-      setTimeout(() => {
-        toLogin();
-      }, 1000);
+      store.commit('saveToken', null);
+      toLogin();
       break;
-      // 404请求不存在
-    case 404:
-      // console.log('请求资源不存在');
+    case 404: //请求资源不存在
+      router.replace('/404')
       break;
   }
 }
@@ -36,6 +31,7 @@ const errorHandle = (status) => {
 var instance = axios
 instance.defaults.timeout = 10000
 instance.defaults.headers.post['Content-Type'] = 'application/json;charset=utf-8';
+
 //请求拦截器
 instance.interceptors.request.use(
   config => {
@@ -47,7 +43,7 @@ instance.interceptors.request.use(
 )
 //响应拦截器
 instance.interceptors.response.use(
-  res => res.status === 200 ? Promise.resolve(res.data) : Promise.reject(res),
+  res => res.status >= 200 && res.status < 300 ? Promise.resolve(res.data) : Promise.reject(res),
   error => {
     const {
       response
@@ -62,7 +58,7 @@ instance.interceptors.response.use(
       // network状态在app.vue中控制着一个全局的断网提示组件的显示隐藏
       // 关于断网组件中的刷新重新获取数据，会在断网组件中说明
       if (!window.navigator.onLine) {
-        //    store.commit('changeNetwork', false);
+        alert('已断开网络')
       } else {
         return Promise.reject(error);
       }
