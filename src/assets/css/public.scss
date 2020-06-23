@@ -1,0 +1,45 @@
+//flex布局，垂直水平居中
+.flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+a {
+  text-decoration: none;
+}
+
+p {
+  text-indent: 2em;
+  color: #666;
+  line-height: 2em;
+}
+
+ul,
+ol {
+  margin-left: 2em;
+
+  li {
+    line-height: 2em;
+  }
+}
+
+
+.title {
+  margin-top: 2em;
+
+  &::before {
+    content: '#';
+    margin-right: 5px;
+    color: #3eaf7c;
+  }
+}
+
+.high-light {
+  background: #aae2b7;
+  color: #dc640e;
+  padding: 2px 5px;
+  border-radius: 5px;
+  font-size: 14px;
+  line-height: 16 px;
+}
