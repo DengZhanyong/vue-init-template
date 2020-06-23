@@ -4,8 +4,8 @@ import router from './router'
 import store from './store'
 
 import './components/component'
-import './assets/css/public.less'
-import './assets/css/config.less'
+import './assets/css/public.{{cssPreType}}'
+import './assets/css/config.{{cssPreType}}'
 
 import api from './api/index'
 import utils from './assets/utils/index'
