@@ -1,7 +1,9 @@
 {
-  "name": "vue-init",
+  "name": "{{projectName}}",
   "version": "0.1.0",
   "private": true,
+  "description": "{{projectDescription}}",
+  "author": "{{author}}",
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
@@ -12,6 +14,8 @@
     "core-js": "^3.6.4",
     "less": "^3.11.1",
     "less-loader": "^6.1.0",
+    "scss": "^0.2.4",
+    "scss-loader": "^0.0.1",
     "stylus": "^0.54.7",
     "stylus-loader": "^3.0.2",
     "vue": "^2.6.11",
