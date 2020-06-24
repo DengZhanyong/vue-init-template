@@ -36,7 +36,7 @@ export default {
   flex-direction: column;
   color: @main-color;
   .link {
-    color: @link-color;
+    color: @main-color;
     &:hover {
       color: #3eaf7c;
     }
