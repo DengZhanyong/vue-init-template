@@ -35,8 +35,9 @@ export default {
 .home {
   flex-direction: column;
   color: @main-color;
-  .link {
-    color: @main-color;
-  }
+}
+
+.link {
+  color: @link-color;
 }
 </style>

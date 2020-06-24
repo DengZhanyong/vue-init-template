@@ -83,14 +83,13 @@ export default {
 <style lang="less" scoped>
 @import '../assets/css/config.less';
 
-.template {
-  h2 {
-    color: @main-color;
-    text-align: center;
-  }
-  .doc {
-    max-width: 1100px;
-    margin: 20px auto;
-  }
+h2 {
+  color: @main-color;
+  text-align: center;
 }
+.doc {
+  max-width: 1100px;
+  margin: 20px auto;
+}
+
 </style>
