@@ -5,7 +5,6 @@ import store from './store'
 
 import './components/component'
 import './assets/css/public.{{cssPreType}}'
-import './assets/css/config.{{cssPreType}}'
 
 import api from './api/index'
 import utils from './assets/utils/index'
