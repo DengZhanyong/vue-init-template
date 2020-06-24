@@ -18,7 +18,7 @@ export default {
   mounted() {},
 }
 </script>
-<style lang="stylus" scoped>
+<style lang="less" scoped>
 .panel {
   padding: 10px;
   border-radius: 5px;
