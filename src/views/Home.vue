@@ -37,9 +37,6 @@ export default {
   color: @main-color;
   .link {
     color: @main-color;
-    &:hover {
-      color: #3eaf7c;
-    }
   }
 }
 </style>
